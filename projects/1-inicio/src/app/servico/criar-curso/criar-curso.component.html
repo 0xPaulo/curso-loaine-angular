@@ -1,0 +1,9 @@
+<h4>Lista de cursos adicionados</h4>
+<input type="text" #cursoInput>
+<button (click)="addCursoArray(cursoInput.value)">Add Curso ao Array</button>
+<br><br>
+<ul>
+  <li *ngFor="let item of cursosArray">{{item}}</li>
+</ul>
+
+<app-receber-curso-criado></app-receber-curso-criado>

@@ -1,0 +1,23 @@
+<section>
+  <h5>*ngIf</h5>
+  <article>
+    <div *ngIf="cursos.length > 0">
+      Lista de cursos aqui.
+    </div>
+    <div *ngIf="cursos.length == 0">
+      Nao existem cursos para serem listados.
+    </div>
+  </article>
+  <br>
+  <article>
+    <div *ngIf="mostrarCursos">
+      Lista de cursos aqui.
+    </div>
+    <div *ngIf="!mostrarCursos">
+      Nao existem cursos para serem listados.
+    </div>
+    <button (click)="onMostrarCurso()">Mostrar ou esconder cursos</button>
+  </article>
+</section>
+<!-- Construir todo um bloco com if pode nao ser custoso, use hidden se for alguma coisa
+simples -->

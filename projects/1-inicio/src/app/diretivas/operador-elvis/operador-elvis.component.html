@@ -1,0 +1,7 @@
+<p>{{tarefa.desc}}</p>
+<!-- <p>{{tarefa.responsavel.nome}}</p> -->
+<p>{{tarefa.responsavel != null ? tarefa.responsavel.nome : 'teste'}}</p>
+<!-- No caso o campo nome nao existe e o responsavel é nulo, usei o
+ternario para nao dar ruim, porem tem um jeito mais facil -->
+<p>Deixa facil se for nulo: {{tarefa.responsavel?.nome}}</p>
+<!-- E pode ser usado seguidaas vezes responsavel?.nome?.outroCoisa? -->

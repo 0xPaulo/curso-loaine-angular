@@ -1,0 +1,17 @@
+<nav class="navbar navbar-light bg-faded navbar-expand-lg">
+  <div class="nav navbar-nav ">
+    <!-- Quando clicar no link a variavel aba recebe Home
+    e se aba for igual a home recebe a classe ativa -->
+    <a class="nav-item nav-link " (click)="aba= 'Home'" [class.active]="aba == 'Home'">Home</a>
+    <a class="nav-item nav-link " (click)="aba= 'Listas'" [class.active]="aba == 'Listas'">Listas</a>
+    <a class="nav-item nav-link " (click)="aba= 'Usuarios'" [class.active]="aba == 'Usuarios'">Usuarios</a>
+  </div>
+</nav>
+<!-- If aba for = a Home aparece o P Home ligado else os outros -->
+<div class="container " [ngSwitch]="aba">
+  <p *ngSwitchCase="'Home'">Home ligado</p>
+  <p *ngSwitchCase="'Listas'">Lista ligado</p>
+  <p *ngSwitchCase="'Usuarios'">Usuarios ligado</p>
+  <p *ngSwitchDefault>inicial</p>
+</div>
+<!--  -->

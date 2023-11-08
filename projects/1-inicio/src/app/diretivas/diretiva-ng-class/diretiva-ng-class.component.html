@@ -1,0 +1,15 @@
+<h1>
+  <i class="glyphicon" [class.glyphicon-star-empty]="!favorito" [class.glyphicon-star]="favorito"
+    (click)="favorito = !favorito">
+  </i>
+</h1>
+<!-- Agora usando a diretiva -->
+<!-- é uma mistura de um obj com operador ternario
+condicao ? valor_se_verdadeiro : valor_se_falso
+mais ou menos
+ -->
+<h1>
+  <i class="glyphicon" [ngClass]="{'glyphicon-star-empty': !favorito,
+    'glyphicon-star' : favorito }" (click)="favorito = !favorito">
+  </i>
+</h1>

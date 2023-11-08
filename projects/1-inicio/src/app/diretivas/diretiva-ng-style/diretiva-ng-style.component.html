@@ -1,0 +1,19 @@
+<!-- Tem 2 botoes um com as propriedades direto no style deles, e o
+outro usando o ngStyle que transforma em um obj  -->
+<h2>Styles com property binding</h2>
+<button [style.backgroundColor]="ativo? 'blue' : 'gray'" [style.color]="ativo? 'white': 'black'"
+  [style.fontWeight]="ativo? 'bold': 'normal'" [style.fontSize]="tamanhoFonte+'px'" (click)="ativo = !ativo">Mudar
+  atributo ativo</button>
+<br><br>
+<div>
+  <input type="text" #valorTeste>
+  <button (click)="atualizar(valorTeste.value)">Atualizar valor</button>
+</div>
+<br>
+<h2>Style com diretiva ngStyle</h2>
+<button [ngStyle]="{backgroundColor:(ativo? 'blue' : 'gray'),color:(ativo?'white':'black'),
+fontWeight:(ativo? 'bold': 'normal'),fontSize:(tamanhoFonte+'px')}" (click)="ativo = !ativo">Mudar
+  atributo ativo</button>
+<div class="alert alert-danger" [style.display]="mostrarErroMsg?'block':'none'" role="alert">
+  {{erroMsg}}
+</div>

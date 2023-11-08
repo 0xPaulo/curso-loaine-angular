@@ -1,0 +1,18 @@
+<p appFundoAzul>diretivas-customizadas works!</p>
+<button appFundoAzul>Bota com fundo azul</button>
+<p appHighlightMouse>
+  Texto com highLight quando passo o mouse
+</p>
+<p appHighlight>
+  Texto com highLight com cores custom
+</p>
+<article>
+  <div *ngIf="mostrarCursos">
+    <p>Lista de cursos aqui.</p>
+  </div>
+  <div *ngElse="mostrarCursos">
+    <p>Nao existem cursos para serem listados.</p>
+  </div>
+  <button (click)="onMostrarCurso()">Mostrar ou esconder cursos</button>
+</article>
+<!-- esse ngElse nao existe eu que fiz essa directiva -->
