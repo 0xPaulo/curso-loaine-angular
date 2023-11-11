@@ -3,3 +3,7 @@
   <a class="collection-item" *ngFor="let item of cursos" [routerLink]="['/curso', item.id]">{{item.nome}}</a>
   <!-- routerLink recebe a string da rota + o parametro do {} sao 2 -->
 </div>
+<div>
+  <p>Pagina: {{pagina}}</p>
+</div>
+<button (click)="proximaPag()">Proxima Pagina</button>
