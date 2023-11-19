@@ -3,7 +3,6 @@ import 'materialize-css';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AlunosRoutingModule } from './alunos/alunos-routing.module';
 import { AlunosModule } from './alunos/alunos.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -20,7 +19,6 @@ import { LoginComponent } from './login/login.component';
     AppRoutingModule,
     CursoRoutingModule,
     AlunosModule,
-    AlunosRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

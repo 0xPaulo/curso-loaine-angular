@@ -1,1 +1,19 @@
 <p>alunos-form works!</p>
+
+<div class="row">
+  <form class="col s12">
+    <div class="row">
+      <div class="input-field col s6">
+        <input disabled [(ngModel)]="aluno.id" [ngModelOptions]="{standalone: true}" type="text">
+        <!-- <label for="first_name">Id</label> -->
+      </div>
+      <div class="input-field col s6">
+        <input type="text" [(ngModel)]="aluno.nome" [ngModelOptions]="{standalone: true}">
+        <!-- <label for="first_name">nome</label> -->
+      </div>
+      <div class="input-field col s6">
+        <input type="text" [(ngModel)]="aluno.email" [ngModelOptions]="{standalone: true}">
+        <!-- <label for="first_name">email</label> -->
+      </div>
+    </div>
+  </form>
