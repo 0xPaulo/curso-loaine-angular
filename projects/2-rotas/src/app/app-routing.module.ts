@@ -6,6 +6,20 @@ import { LoginComponent } from './login/login.component';
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'login', component: LoginComponent },
+  {
+    path: 'alunos',
+    loadChildren: () =>
+      import('projects/2-rotas/src/app/alunos/alunos.module').then(
+        (m) => m.AlunosModule
+      ),
+  },
+  {
+    path: 'cursos',
+    loadChildren: () =>
+      import('projects/2-rotas/src/app/cursos/cursos.module').then(
+        (m) => m.CursosModule
+      ),
+  },
 ];
 
 @NgModule({

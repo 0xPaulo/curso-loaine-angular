@@ -1,6 +1,6 @@
 <p>cursos works!</p>
 <div class="collection">
-  <a class="collection-item" *ngFor="let item of cursos" [routerLink]="['/curso', item.id]">{{item.nome}}</a>
+  <a class="collection-item" *ngFor="let item of cursos" [routerLink]="['/cursos', item.id]">{{item.nome}}</a>
   <!-- routerLink recebe a string da rota + o parametro do {} sao 2 -->
 </div>
 <div>

@@ -9,7 +9,7 @@ import { AlunosFormComponent } from './alunos-form/alunos-form.component';
 // logo o novo é qualquer coisa, tem que ficar em cima
 const alunosRoutes: Routes = [
   {
-    path: 'alunos',
+    path: '',
     component: AlunosComponent,
     children: [
       { path: 'novo', component: AlunosFormComponent },

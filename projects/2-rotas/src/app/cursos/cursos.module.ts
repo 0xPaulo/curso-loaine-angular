@@ -4,7 +4,9 @@ import { CursoDetalheComponent } from './curso-detalhe/curso-detalhe.component';
 import { CursoNaoEncontradoComponent } from './curso-nao-encontrado/curso-nao-encontrado.component';
 import { CursosComponent } from './cursos.component';
 import { CursoService } from '../service/curso.service';
-import { AppRoutingModule } from '../app-routing.module';
+import { RouterModule } from '@angular/router';
+import { CursoRoutingModule } from './curso-routing.module';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -12,7 +14,7 @@ import { AppRoutingModule } from '../app-routing.module';
     CursoDetalheComponent,
     CursoNaoEncontradoComponent,
   ],
-  imports: [CommonModule, AppRoutingModule],
+  imports: [CommonModule, RouterModule, CursoRoutingModule, FormsModule],
   providers: [CursoService],
 })
 export class CursosModule {}
