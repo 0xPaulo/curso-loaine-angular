@@ -1,4 +1,4 @@
-<nav>
+<nav *ngIf="mostrarMenu">
   <div class="nav-wrapper">
     <a routerLinkActive="active" routerLink="" class="brand-logo right">Rotas ng2</a>
     <ul id="nav-mobile" class="left hide-on-med-and-down">
@@ -10,7 +10,7 @@
   </div>
 </nav>
 <div class="container">
-  <input #idCurso (input)="0">
+  <!-- <input #idCurso (input)="0"> -->
   <router-outlet></router-outlet>
 </div>
 <div>
