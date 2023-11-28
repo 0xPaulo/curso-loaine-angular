@@ -6,13 +6,21 @@ import { CursosComponent } from './cursos.component';
 import { AuthGuard } from '../guards/auth.guard';
 
 const cursoRotas: Routes = [
-  { path: '', component: CursosComponent, canActivate: [AuthGuard] },
+  {
+    path: '',
+    component: CursosComponent,
+    canActivate: [AuthGuard],
+  },
   {
     path: 'nao-encontrado',
     component: CursoNaoEncontradoComponent,
     canActivate: [AuthGuard],
   },
-  { path: ':id', component: CursoDetalheComponent, canActivate: [AuthGuard] },
+  {
+    path: ':id',
+    component: CursoDetalheComponent,
+    canActivate: [AuthGuard],
+  },
 ];
 
 @NgModule({

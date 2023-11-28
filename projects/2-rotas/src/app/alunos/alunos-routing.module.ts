@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AlunosComponent } from './alunos.component';
 import { AlunosDetalheComponent } from './alunos-detalhe/alunos-detalhe.component';
 import { AlunosFormComponent } from './alunos-form/alunos-form.component';
+import { AlunosAuthGuard } from '../guards/alunos.auth.guard';
 import { AuthGuard } from '../guards/auth.guard';
 
 // tudo que for hardcoded é avaliado primeiro alunos/novo
@@ -12,12 +13,13 @@ const alunosRoutes: Routes = [
   {
     path: '',
     component: AlunosComponent,
+    canActivate: [AuthGuard],
+    canActivateChild: [AlunosAuthGuard],
     children: [
       { path: 'novo', component: AlunosFormComponent },
       { path: ':id', component: AlunosDetalheComponent },
       { path: ':id/editar', component: AlunosFormComponent },
     ],
-    canActivate: [AuthGuard],
   },
 ];
 
