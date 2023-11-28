@@ -23,4 +23,11 @@ export class AuthService {
       this.usuarioAutorizado = false;
     }
   }
+
+  usuarioEstaAuth() {
+    if (this.usuarioAutorizado) {
+      return true;
+    }
+    return false;
+  }
 }
