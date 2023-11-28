@@ -8,10 +8,11 @@ import { AlunosRoutingModule } from './alunos-routing.module';
 import { AlunoService } from '../service/aluno.service';
 import { FormsModule } from '@angular/forms';
 import { AlunosAuthGuard } from '../guards/alunos.auth.guard';
+import { AlunosDeactGuard } from '../guards/alunos.deact.guard';
 
 @NgModule({
   declarations: [AlunosComponent, AlunosFormComponent, AlunosDetalheComponent],
   imports: [CommonModule, RouterModule, AlunosRoutingModule, FormsModule],
-  providers: [AlunoService, AlunosAuthGuard],
+  providers: [AlunoService, AlunosAuthGuard, AlunosDeactGuard],
 })
 export class AlunosModule {}

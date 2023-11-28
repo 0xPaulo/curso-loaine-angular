@@ -24,12 +24,13 @@ export class AlunosAuthGuard implements CanActivateChild {
     | Promise<boolean | UrlTree> {
     console.log(childRoute);
     console.log(state);
+    return true;
 
-    if (state.url.includes('editar')) {
-      alert('USUARIO SEM ACESSO');
-      return false;
-    } else {
-      return true;
-    }
+    // if (state.url.includes('editar')) {
+    //   alert('USUARIO SEM ACESSO');
+    //   return false;
+    // } else {
+    //   return true;
+    // }
   }
 }

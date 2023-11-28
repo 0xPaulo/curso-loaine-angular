@@ -8,7 +8,7 @@
         <!-- <label for="first_name">Id</label> -->
       </div>
       <div class="input-field col s6">
-        <input type="text" [(ngModel)]="aluno.nome" [ngModelOptions]="{standalone: true}">
+        <input type="text" [(ngModel)]="aluno.nome" [ngModelOptions]="{standalone: true}" (input)="onInput()">
         <!-- <label for="first_name">nome</label> -->
       </div>
       <div class="input-field col s6">

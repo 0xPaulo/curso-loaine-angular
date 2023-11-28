@@ -5,6 +5,7 @@ import { AlunosDetalheComponent } from './alunos-detalhe/alunos-detalhe.componen
 import { AlunosFormComponent } from './alunos-form/alunos-form.component';
 import { AlunosAuthGuard } from '../guards/alunos.auth.guard';
 import { AuthGuard } from '../guards/auth.guard';
+import { AlunosDeactGuard } from '../guards/alunos.deact.guard';
 
 // tudo que for hardcoded é avaliado primeiro alunos/novo
 // e tudo depois do : é qualquer coisa
@@ -18,7 +19,11 @@ const alunosRoutes: Routes = [
     children: [
       { path: 'novo', component: AlunosFormComponent },
       { path: ':id', component: AlunosDetalheComponent },
-      { path: ':id/editar', component: AlunosFormComponent },
+      {
+        path: ':id/editar',
+        component: AlunosFormComponent,
+        canDeactivate: [AlunosDeactGuard],
+      },
     ],
   },
 ];
