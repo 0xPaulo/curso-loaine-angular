@@ -10,9 +10,10 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { AuthGuard } from './guards/auth.guard';
 import { AuthService } from './service/auth.service';
+import { RotasNaoEncontradaComponent } from './rotas-nao-encontrada/rotas-nao-encontrada.component';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, LoginComponent],
+  declarations: [AppComponent, HomeComponent, LoginComponent, RotasNaoEncontradaComponent],
   imports: [BrowserModule, FormsModule, AppRoutingModule],
   providers: [AuthGuard, AuthService],
   bootstrap: [AppComponent],

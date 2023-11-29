@@ -17,6 +17,7 @@ const alunosRoutes: Routes = [
     component: AlunosComponent,
     canActivate: [AuthGuard],
     canActivateChild: [AlunosAuthGuard],
+    canLoad: [AuthGuard],
     children: [
       { path: 'novo', component: AlunosFormComponent },
       {

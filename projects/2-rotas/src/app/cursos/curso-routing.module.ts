@@ -10,6 +10,7 @@ const cursoRotas: Routes = [
     path: '',
     component: CursosComponent,
     canActivate: [AuthGuard],
+    canLoad: [AuthGuard],
   },
   {
     path: 'nao-encontrado',
