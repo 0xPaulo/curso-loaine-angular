@@ -2,13 +2,16 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { AlunoService } from '../../service/aluno.service';
+import { IFormCanDeactivate } from '../../guards/iform.canDeactvate';
 
 @Component({
   selector: 'app-alunos-form',
   templateUrl: './alunos-form.component.html',
   styleUrls: ['./alunos-form.component.scss'],
 })
-export class AlunosFormComponent implements OnInit, OnDestroy {
+export class AlunosFormComponent
+  implements OnInit, OnDestroy, IFormCanDeactivate
+{
   aluno: any;
   subscriber: Subscription = new Subscription();
   private formMudou: boolean = false;
@@ -40,5 +43,10 @@ export class AlunosFormComponent implements OnInit, OnDestroy {
       confirm('Tem certeza que desaja sair dessa pagina?');
     }
     return true;
+  }
+
+  // isso é para tornar generico uma interface
+  podeDesativar() {
+    return this.podeMudarRota();
   }
 }
