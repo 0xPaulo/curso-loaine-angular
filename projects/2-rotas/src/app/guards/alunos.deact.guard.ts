@@ -5,7 +5,6 @@ import {
   RouterStateSnapshot,
   UrlTree,
 } from '@angular/router';
-import { AlunosFormComponent } from '../alunos/alunos-form/alunos-form.component';
 import { Observable } from 'rxjs';
 import { IFormCanDeactivate } from './iform.canDeactvate';
 
