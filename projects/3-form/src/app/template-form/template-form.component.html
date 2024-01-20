@@ -6,8 +6,9 @@
 
   <div class="form-group">
     <label for="email">Email</label>
-    <input type="text" class="form-control" id="email" placeholder="Email" name="email" [ngModel]="usuario.email">
-    <small class="text-muted">Nunca iremos compartilhar seu email</small>
+    <input type="text" class="form-control" id="email" placeholder="Email" name="email" [ngModel]="usuario.email" #email
+      required email>
+    <small class="text-muted">{{email.className}}</small>
   </div>
   <!-- [(muda o component.ts)] -->
   <!-- [Muda somente o html] -->
