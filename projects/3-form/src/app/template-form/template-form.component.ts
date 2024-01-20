@@ -7,7 +7,12 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./template-form.component.scss'],
 })
 export class TemplateFormComponent {
+  usuario: any = {
+    nome: 'stock',
+    email: 'stock',
+  };
   onSubmit(_t5: NgForm) {
-    console.log(_t5);
+    console.log(_t5.value);
+    console.log(this.usuario);
   }
 }
